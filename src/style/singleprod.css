@@ -1,0 +1,93 @@
+.single-prod {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  height: 60vh;
+  margin: 20px 30px;
+}
+
+#prodimg {
+  grid-area: 1 / 1 / 2 / 2;
+  display: block;
+  width: 60%;
+  height: 90%;
+  place-self: stretch end;
+}
+#prodimg:hover {
+  transform: scale(1.1);
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+.prod-box {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.prod-box .star {
+  color: rgb(255, 227, 17);
+}
+.prod-box #discount {
+  display: flex;
+  gap: 5px;
+  text-align: center;
+}
+.prod-box #discount p {
+  text-decoration: line-through;
+  color: gray;
+}
+.prod-box #sizes {
+  display: flex;
+  gap: 5px;
+  font-size: 1rem;
+}
+.prod-box .size {
+  display: flex;
+  gap: 2px;
+  text-align: center;
+}
+.prod-box #quantity input {
+  width: 40px;
+  padding: 2px;
+  outline: none;
+}
+.prod-box #quantity button {
+  padding: 2px;
+  width: 20px;
+  cursor: pointer;
+}
+.prod-box #checkoutBtn button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.prod-box #checkoutBtn #btn1 {
+  background: rgb(103, 170, 2);
+}
+.prod-box #checkoutBtn #btn2 {
+  background: rgb(225, 0, 0);
+}
+#description{
+  text-align: center;
+}
+.title{
+  padding-left: 90px;
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+}
+#description h3{
+  font-size: 1.3rem;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.review{
+  background: linear-gradient(white, gray);
+  padding: 30px 70px;
+}

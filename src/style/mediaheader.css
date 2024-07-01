@@ -1,0 +1,33 @@
+#media-header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+#headerbg {
+  background: #000;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#media-header ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  position: absolute;
+  top: 35%;
+  left: 30%;
+
+  
+}
+#media-header ul a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+#media-header ul a:hover{
+  color: gray;
+  font-weight: 600;
+}
+

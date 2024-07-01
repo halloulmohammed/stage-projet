@@ -1,0 +1,70 @@
+/* src/ArticlePage.css */
+
+.article-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  .page-title{
+    padding-bottom: 10px;
+
+  }
+  .article {
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .article h2 {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .article p {
+    line-height: 1.6;
+  }
+  
+  .article h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom:10px ;
+  }
+  
+  .article ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .article li {
+    margin-bottom: 10px;
+  }
+  
+  .article textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .article .arcticleContent{
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .article button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .article button:hover {
+    background-color:whitesmoke;
+    color:#007bff ;
+    font-weight: 600;
+    border: 1px solid  #007bff;
+    
+  }
+.article-comment li{
+  padding: 5px;
+}  

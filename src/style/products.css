@@ -1,0 +1,42 @@
+#prd-page {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  background: whitesmoke;
+}
+#menu-prd {
+  grid-area: 1 / 1 / 4 / 2;
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  padding: 20px;
+  row-gap: 5px;
+  position: fixed;
+}
+#product-cont {
+  grid-area: 1 / 2 / 4 / 6;
+  background: white;
+  padding-bottom: 20px;
+}
+#product-cont h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d412f;
+  margin: 30px;
+}
+.categ {
+  display: flex;
+  flex-direction: column;
+  margin:10px 0 0 10px ;
+}
+.categ a {
+  margin: 5px;
+  color: black;
+  text-decoration: none;
+}
+.categ a:hover{
+  color: gray;
+}
+
