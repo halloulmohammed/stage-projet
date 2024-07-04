@@ -3,7 +3,7 @@ import { Hero } from "../component/Hero";
 import { Featured } from "../component/Featured";
 import "../App.css";
 import { Appsection } from "../component/Appsection";
-import items from "./Productlist";
+import items from "./../data/Productlist";
 export const Home = () => {
   return (
     <div>

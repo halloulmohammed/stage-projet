@@ -5,7 +5,7 @@ import { Virtual, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import items from "../pages/Productlist";
+import items from "../data/Productlist";
 
 export const Product = () => {
   return (
@@ -67,7 +67,30 @@ export const Product = () => {
             ))}
           </Swiper>
         </div>
+        <div id="accessoire">
+          <h1>Accessoires</h1>
+          <Swiper
+            modules={[Virtual, Navigation]}
+            slidesPerView={4}
+            spaceBetween={30}
+            navigation={true}
+          >
+            {items[1].map((item, index) => (
+              <SwiperSlide virtualIndex={index} className="swipper">
+                <Featured
+                  className="swiper-slide"
+                  key={index}
+                  pic={item.pic}
+                  title={item.title}
+                  price={item.price}
+                  rate={item.rate}
+                  review={item.review}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-    </div>
-  );
+    </div> 
+     );
 };

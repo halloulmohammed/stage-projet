@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Comments } from "../component/Comments";
 import { Featured } from "../component/Featured";
 import "../style/singleprod.css";
-import items from "./Productlist";
+import items from "./../data/Productlist";
 export const Productpage = () => {
   const params = useParams();
   const id = params.id;
@@ -110,7 +110,7 @@ export const Productpage = () => {
         <p>{product.description}</p>
         </div>
       <div id="related-product">
-        <h3 className="title">Related products:</h3>
+        <h3 className="section-title">Related products:</h3>
         <div id="product-containner">
           {items[2].map((item, i) => (
             <Featured
@@ -125,10 +125,13 @@ export const Productpage = () => {
           ))}
         </div>
       </div>
-      <h3 className="title">Review:</h3>
-      <div className="review">
-        <Comments />
+      <div id="review">
+        <h3 className="section-title">Review:</h3>
+        <div className="review">
+          <Comments />
+        </div>
       </div>
+      
       
     </div>
   );

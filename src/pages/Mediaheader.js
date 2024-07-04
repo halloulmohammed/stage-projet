@@ -1,27 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../style/mediaheader.css";
 import { Tifo } from "../media/Tifo";
-
+import { VideoPlayer } from "../media/VideoPlayer";
+import { Songs } from "../media/Songs";
 export const Mediaheader = () => {
   return (
     <div>
       <div id="media-header">
-      <div id="headerbg">
-        <ul>
-          <li>
-            <Link to="/media/tifo">Tifo</Link>
-          </li>
-          <li>
-            <Link to="/article">Songs</Link>
-          </li>
-          <li>
-            <Link to="/article">Vedios</Link>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <a href="#tifo">Tifo</a>
+            </li>
+            <li>
+              <a href="#video">Vedios</a>
+            </li>
+            <li>
+              <a href="#song">Songs</a>
+            </li>
+          </ul>
       </div>
+      <div className="container-medias" id="tifo" >
+        <h2>Tifo Pictures</h2>
+        <Tifo />
       </div>
-      <Tifo />
+      <div className="container-medias" id="video">
+        <h2>Vedios</h2>
+        <VideoPlayer />
+      </div>
+      <div className="container-medias" id="song" >
+        <h2>Songs</h2>
+        <Songs />
+      </div>
+
     </div>
     
   );

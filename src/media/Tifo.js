@@ -1,24 +1,39 @@
-import React from 'react';
-import {pictures} from '../data/tifo';
-import './TifoPictures.css'; // Import your custom CSS file
+import React, { useState } from 'react';
+import { pictures } from '../data/tifo';
+import '../style/Tifo.css';
 
 export const Tifo = () => {
+  const [selectedPicture, setSelectedPicture] = useState(null);
+
+  const handleClick = (picture) => {
+    setSelectedPicture(picture);
+  };
+
+  const handleClose = () => {
+    setSelectedPicture(null);
+  };
+
   return (
-    <div className="container">
-      <h2 className="my-4">Tifo Pictures</h2>
-      <div className="card-container">
-        {pictures.map(picture => (
-          <div key={picture.id} className="card">
-            <img src={picture.imageUrl} className="card-img" alt={picture.title} />
-            <div className="card-body">
-              <h5 className="card-title">{picture.title}</h5>
-            </div>
+    <div className="card-container">
+      {pictures.map((picture) => (
+          <button onClick={() => handleClick(picture)} key={picture.id}>
+            <img src={picture.imageUrl} className="card-img" alt={picture.title}  />
+          </button>
+      ))}
+
+      {selectedPicture && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleClose}>&times;</span>
+            <img src={selectedPicture.imageUrl} alt={selectedPicture.title} />
+            <p>{selectedPicture.title}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
-}
+};
+
 
 
 

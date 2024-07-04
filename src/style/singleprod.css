@@ -76,8 +76,8 @@
 #description{
   text-align: center;
 }
-.title{
-  padding-left: 90px;
+#review .section-title, #related-product .section-title{
+  padding-left: 90px; 
   font-size: 1.3rem;
   padding-bottom: 10px;
 }

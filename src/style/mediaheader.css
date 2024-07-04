@@ -1,33 +1,40 @@
 #media-header {
-  height: 10vh;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  position: sticky;
+  top: 10vh;
+  z-index: 10;
 }
-#headerbg {
-  background: #000;
-  position: relative;
-  width: 40%;
-  height: 100%;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+body{
+  background: whitesmoke;
 }
 #media-header ul {
   display: flex;
   gap: 40px;
   list-style: none;
-  position: absolute;
-  top: 35%;
-  left: 30%;
-
-  
+  padding: 15px 50px;
+  background:black ;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 #media-header ul a {
   text-decoration: none;
-  color: whitesmoke;
+  color:whitesmoke;
 }
 #media-header ul a:hover{
   color: gray;
   font-weight: 600;
 }
-
+#tifo h2, #video h2, #song h2{
+  font-size: 1.5rem;
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #1d412f;
+}
+#tifo h2{
+  margin-top:15px;
+}
+.container-medias{
+  width: 100%;
+}
