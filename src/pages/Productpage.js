@@ -1,29 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
 import { Comments } from "../component/Comments";
 import { Featured } from "../component/Featured";
+import {PaymentWidget} from "./PaymentWidget"; // Import the PaymentWidget component
 import "../style/singleprod.css";
 import items from "./../data/Productlist";
+
 export const Productpage = () => {
   const params = useParams();
   const id = params.id;
   const product = items[4].find((product) => product.id === id);
-  const [size, setsize] = useState("");
+  const [size, setSize] = useState("");
+  const [quantity, setQuantity] = useState(1);
+  const [showPayment, setShowPayment] = useState(false);
+
+  const handleShopNowClick = () => {
+    setShowPayment(true);
+  };
+
+  const handleClosePayment = () => {
+    setShowPayment(false);
+  };
+
   const showSize = (event) => {
-    setsize(event.target.value);
+    setSize(event.target.value);
   };
-  const [quantity, setquantity] = useState(0);
-  const addQuantity = (e) => {
-    setquantity((e) => e + 1);
+
+  const addQuantity = () => {
+    setQuantity(quantity + 1);
   };
-  const takeQuantity = (e) => {
-    if (e <= 0) {
-      return 0; // Returning 0 or handling the case when quantity is 0 or negative
-    } else {
-      setquantity((currentQuantity) => Math.max(currentQuantity - 1, 0));
+
+  const takeQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
     }
   };
+
   return (
     <div>
       <div className="single-prod">
@@ -62,7 +74,6 @@ export const Productpage = () => {
               />
               <label htmlFor="M">M</label>
             </div>
-
             <div className="size">
               <input
                 type="radio"
@@ -95,20 +106,27 @@ export const Productpage = () => {
             </div>
           </div>
           <div id="quantity">
-            <input placeholder={quantity} />
+            <input
+              type="number"
+              placeholder={quantity}
+              min="1"
+              onChange={() => {}}
+            />
             <button onClick={addQuantity}>+</button>
             <button onClick={takeQuantity}>-</button>
           </div>
           <div id="checkoutBtn">
-            <button id="btn1">Add To Card</button>
-            <button id="btn2">Shop Now</button>
+            <button id="btn1">Add To Cart</button>
+            <button id="btn2" onClick={handleShopNowClick}>
+              Shop Now
+            </button>
           </div>
         </div>
       </div>
       <div id="description">
         <h3>Description</h3>
         <p>{product.description}</p>
-        </div>
+      </div>
       <div id="related-product">
         <h3 className="section-title">Related products:</h3>
         <div id="product-containner">
@@ -131,8 +149,11 @@ export const Productpage = () => {
           <Comments />
         </div>
       </div>
-      
-      
+
+      {/* Payment Widget */}
+      {showPayment && <PaymentWidget onClose={handleClosePayment} />}
     </div>
   );
 };
+
+
