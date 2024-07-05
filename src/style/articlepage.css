@@ -1,4 +1,4 @@
-/* src/ArticlePage.css */
+src/ArticlePage.css
 
 .article-page {
     max-width: 800px;
@@ -63,8 +63,13 @@
     color:#007bff ;
     font-weight: 600;
     border: 1px solid  #007bff;
-    
   }
 .article-comment li{
   padding: 5px;
 }  
+.article .articleDesc{
+  display: flex;
+}
+.article .articleDesc img{
+  width: 20vw;
+}

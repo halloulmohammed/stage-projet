@@ -1,19 +1,19 @@
-// src/components/Article.js
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Comments } from "../component/Comments";
 export const Article = ({ article }) => {
-  
-
   return (
     <div className="article">
-      <div className='arcticleContent'>
+      <div className='articleContent'>
         <h2>{article.title}</h2>
-        <p>{article.content}</p>
+        <div className='articleDesc'>
+          <p>{article.header}</p>
+          {article.src && <img src={article.src} alt={article.title} />}
+        </div>
+        <Link to={`/article/${article.id}`}>
+          Read More..
+        </Link>
       </div>
-      <h3>Comments:</h3>
-      <Comments />
     </div>
   );
 };
