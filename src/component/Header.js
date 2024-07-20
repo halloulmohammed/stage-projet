@@ -1,30 +1,37 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../style/header.css";
 
 export const Header = () => {
+  const [activeLink, setActiveLink] = useState("/"); // State to keep track of active link
+  const location = useLocation(); // Hook to get current location
+
+  // Update active link when location changes
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location]);
+
   return (
     <div id="header-container">
-      <Link to="/">
+      <div>
         <img src="/images/logo.png" alt="logo" id="logo" />
-      </Link>
+      </div>
       <ul id="nav-bar">
-        <li id="active">
-          <Link to="/" >Home</Link>
+        <li className={activeLink === "/" ? "active" : ""}>
+          <Link to="/">Home</Link>
         </li>
-        <li>
+        <li className={activeLink === "/product" ? "active" : ""}>
           <Link to="/product">Products</Link>
         </li>
-        <li>
+        <li className={activeLink === "/article" ? "active" : ""}>
           <Link to="/article">Articles</Link>
         </li>
-        <li>
-         <Link to="/media">Media</Link>
+        <li className={activeLink === "/media" ? "active" : ""}>
+          <Link to="/media">Media</Link>
         </li>
         <li>
           <a href="/contact">Contact</a>
         </li>
-        
       </ul>
       <div id="search-bar">
         <input placeholder="searching for..." />

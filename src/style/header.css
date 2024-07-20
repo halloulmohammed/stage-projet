@@ -1,8 +1,9 @@
+
 #header-container {
   height: 10vh;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   background: whitesmoke;
   position: sticky;
   top: 0px;
@@ -11,67 +12,61 @@
   -webkit-box-shadow: 0px 5px 5px 0px rgba(168, 166, 166, 0.75);
   -moz-box-shadow: 0px 5px 5px 0px rgba(168, 166, 166, 0.75);
 }
-i{
-  color: black;
-}
-link {
-  text-decoration: none;
-  color: black;
-}
+
 #header-container #logo {
   height: 30px;
 }
-#header-container #nav-bar {
-  display: flex;
+
+#nav-bar {
   list-style: none;
+  display: flex;
   gap: 30px;
 }
-#header-container #nav-bar li a {
-  text-decoration: none;
-  color: black;
-}
-#header-container #nav-bar li {
+
+#nav-bar li {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   position: relative;
 }
-#header-container #nav-bar li a:hover {
-  color: gray;
+
+#nav-bar li a {
+  text-decoration: none;
+  color: black;
 }
-#header-container #nav-bar li a:hover::after {
+
+#nav-bar li.active a {
+  /* Style for active link */
+  font-weight: bold;
+  color: #007bff; /* Example: Blue color */
+}
+
+#nav-bar li a:hover {
+  color: #007bff;
+}
+
+#nav-bar li a:hover::after {
   content: "";
   position: absolute;
-  bottom:-2px; /* Adjust the distance from the text */
+  bottom: -2px; /* Adjust the distance from the text */
   left: 0;
   width: 40%;
   height: 2px;
-  background-color: rgb(92, 90, 90);
+  background-color: #007bff;
 }
 
-#header-container #search-bar input {
-  width: 170px;
-  outline: none;
-}
-#header-container #search-bar {
-  background: rgb(212, 212, 212);
+#search-bar {
   padding: 3px 10px;
   border-radius: 10px;
+  background: rgb(212, 212, 212);
 }
-#header-container #search-bar input {
+
+#search-bar input {
+  width: 170px;
   outline: none;
   border: none;
   background: transparent;
 }
-#header-container li #media {
-  outline: none;
-  border: none;
-  background: transparent;
-  font-family: "Poppins", sans-serif;
-  color:black;
-  font-weight: 500;
-  font-size: 1rem;
-}
-#header-container li #media :hover{
-  color: black;
+#logo{
+  display: block;
 }
