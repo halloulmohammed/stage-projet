@@ -4,11 +4,11 @@ import '../style/Tifo.css';
 
 export const Tifo = () => {
   const [selectedPicture, setSelectedPicture] = useState(null);
-
+  console.log(selectedPicture);
   const handleClick = (picture) => {
     setSelectedPicture(picture);
+  
   };
-
   const handleClose = () => {
     setSelectedPicture(null);
   };

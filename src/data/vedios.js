@@ -5,19 +5,19 @@ export const videos = [
       id: 1,
       title: 'Crackage Fatal Tigers',
       thumbnailUrl: './videos/thumbnail/MAS.jpg',
-      videoUrl: 'https://www.youtube.com/watch?v=hCqscA8DFYE',
+      youtubeId:'3bFuL9t2EWc'
     },
     {
       id: 2,
       title: 'Mouvement Green Boys virage',
       thumbnailUrl: './videos/thumbnail/RAJA.jpg',
-      videoUrl: './videos/vidraja.mp4',
+      youtubeId:'_DS_4SIS6bA'
     },
     {
       id: 3,
       title: 'Ambiance Winners',
       thumbnailUrl: './videos/thumbnail/MAS.jpg',
-      videoUrl: './videos/vidwac.mp4',
+      youtubeId:'n24ENPxeCyo'
     },
     
   ];

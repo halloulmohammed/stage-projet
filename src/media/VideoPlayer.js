@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { videos } from '../data/vedios'; // Assuming you have a videos data file
 import '../style/VideoGallery.css'; // Adjust the CSS file path as per your project
+import { videos } from '../data/vedios'; // Assuming you have a videos data file
 
-export  const VideoPlayer = () => {
+export const VideoPlayer = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const handleVideoClick = (video) => {
@@ -28,10 +28,15 @@ export  const VideoPlayer = () => {
         <div className="modal">
           <div className="modal-content">
             <span className="close" onClick={handleCloseModal}>&times;</span>
-            <video controls className='vedio-size'>
-              <source src={selectedVideo.videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="video-container">
+              <iframe
+                title={selectedVideo.title}
+                width="700"
+                height="470"
+                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}`}
+                allowFullScreen
+              ></iframe>
+            </div>
             <p className='vid-title'>{selectedVideo.title}</p>
           </div>
         </div>
@@ -39,5 +44,3 @@ export  const VideoPlayer = () => {
     </div>
   );
 };
-
-

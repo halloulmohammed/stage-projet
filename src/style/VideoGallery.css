@@ -18,6 +18,9 @@
     text-align: center;
     padding-top: 5px;
   }
+  iframe{
+    border: none;
+  }
   .modal {
     position: fixed;
     top: 0;

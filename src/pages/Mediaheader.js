@@ -23,7 +23,8 @@ export const Mediaheader = () => {
               type="radio"
               className="tab tab-selector"
               name="tab"
-              checked={activeTab === 0}
+              defaultChecked={activeTab === 0}
+              
             />
             <label
               htmlFor="tab-1"
@@ -38,7 +39,7 @@ export const Mediaheader = () => {
               type="radio"
               className="tab tab-selector"
               name="tab"
-              checked={activeTab === 1}
+              defaultChecked={activeTab === 1}
             />
             <label
               htmlFor="tab-2"
@@ -53,7 +54,7 @@ export const Mediaheader = () => {
               type="radio"
               className="tab tab-selector"
               name="tab"
-              checked={activeTab === 2}
+              defaultChecked={activeTab === 2}
             />
             <label
               htmlFor="tab-3"
@@ -68,7 +69,7 @@ export const Mediaheader = () => {
               type="radio"
               className="tab tab-selector"
               name="tab"
-              checked={activeTab === 3}
+              defaultChecked={activeTab === 3}
             />
             <div className="glider"></div>
             <section className="content">
