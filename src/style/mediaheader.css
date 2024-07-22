@@ -46,6 +46,8 @@
   position: absolute;
   padding: 10px 20px;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #tab-1:checked ~ .glider {
@@ -102,7 +104,7 @@
 .content {
   text-align: left;
   line-height: 20px;
-  min-height: 90vh;
+  min-height: 100vh;
   border-radius: 5px;
   box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 10%);
   display: block;
@@ -113,15 +115,12 @@
   position: relative;
 }
 .content p {
-  margin: 10px 15px 10px 0;
-  letter-spacing: 0.75px;
   font-size: 14pt;
   font-style: normal;
   color: #f0f2fc;
   line-height: 30px;
-  margin-top: 10pt;
   font-family: "freight-display-pro";
-  font-weight: 300 !important;
+  font-weight: 300;
 }
 h2.tab-title.tab-warning,
 h2.tab-title.tab-success,

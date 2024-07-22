@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    
     padding: 30px 0;
   }
   .video-container button{
@@ -16,7 +15,7 @@
   }
   .video-container p{
     text-align: center;
-    padding-top: 5px;
+    
   }
   iframe{
     border: none;
@@ -40,6 +39,7 @@
     text-align: center;
     border: none;
     color: white;
+    top: 20vh;
   }
   .vedio-size{
     width: 96%;
@@ -56,10 +56,4 @@
   .close:hover {
     color: rgb(255, 255, 255);
   }
-  .lyrics h3, .lyrics p{
-    margin-bottom: 15px;
-    color: white;
-  }
-  .lyrics h3{
-    color: whitesmoke;
-  }
+  

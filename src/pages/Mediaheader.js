@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../style/mediaheader.css";
 import { Tifo } from "../media/Tifo";
 import { VideoPlayer } from "../media/VideoPlayer";
-import { Songs } from "../media/Songs";
+import { MusicPlayer } from "../musicplayer/MusicPlayer";
 
 export const Mediaheader = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -10,8 +10,6 @@ export const Mediaheader = () => {
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
-
- 
 
   return (
     <div className="wrapper pre">
@@ -80,7 +78,7 @@ export const Mediaheader = () => {
                 <VideoPlayer />
               </div>
               <div className={`item ${activeTab === 2 ? 'active' : ''}`} id="content-3">
-                <Songs />
+                <MusicPlayer />
               </div>
             </section>
           </div>
