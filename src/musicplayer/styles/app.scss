@@ -2,12 +2,12 @@
 @import "./player"; 
 @import "./song"; 
 @import "./nav"; 
-h2, 
-h3 { 
+#musicplayer h2, 
+#musicplayer h3 { 
     color: #133a1b; 
 } 
-h3, 
-h4 { 
+#musicplayer h3, 
+#musicplayer h4 { 
     font-weight: 600; 
 } 
 button { 
