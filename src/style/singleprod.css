@@ -47,15 +47,24 @@
   gap: 2px;
   text-align: center;
 }
+.prod-box #quantity{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  height: 30px;
+  width: 100px;
+}
 .prod-box #quantity input {
-  width: 40px;
-  padding: 2px;
   outline: none;
+  border: none;
+  height: 100%;
+  width: 50%;
 }
 .prod-box #quantity button {
-  padding: 2px;
-  width: 20px;
   cursor: pointer;
+  border: none;
+  width: 25%;
+  height: 100%;
 }
 .prod-box #checkoutBtn button {
   padding: 5px 10px;

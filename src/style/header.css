@@ -38,11 +38,11 @@
 #nav-bar li.active a {
   /* Style for active link */
   font-weight: bold;
-  color: #007bff; /* Example: Blue color */
+  color: #1fbb60; /* Example: Blue color */
 }
 
 #nav-bar li a:hover {
-  color: #007bff;
+  color: #1fbb60;
 }
 
 #nav-bar li a:hover::after {
@@ -52,7 +52,7 @@
   left: 0;
   width: 40%;
   height: 2px;
-  background-color: #007bff;
+  background-color:#1fbb60;
 }
 
 #search-bar {
