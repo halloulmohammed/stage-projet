@@ -36,7 +36,7 @@
     font-family: 'Archivo Black', sans-serif;
     font-size: 55px;
     font-weight: 800;
-    color: #1fbb60;
+    color: #f0a714;
 }
 #hero-section h2{
     font-family: "Poppins", sans-serif;
@@ -60,7 +60,7 @@
     color: black;
 }
 #hero-section a:hover{
-    background: #1fbb60;
+    background: #f0a714;
     color: white;
     border: none;
 }
