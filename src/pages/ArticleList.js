@@ -7,7 +7,7 @@ export const ArticleList = () => {
   return (
     <div className="article-list">
       <h1 className="page-title">Articles about Ultras</h1>
-      <div className='container'>
+      <div className='art-container'>
       {articles[0].map(article => (
         <div className="card" key={article.id}>
         <figure className="card__thumb">

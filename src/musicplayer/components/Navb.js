@@ -2,7 +2,7 @@ import React from "react";
   
 const Nav = ({ setLibraryStatus, libraryStatus }) => { 
     return ( 
-        <nav> 
+        <nav id="musicnav"> 
             <h1>listen to your favorite songs of your ultras</h1> 
             <button 
                 onClick={() => { 

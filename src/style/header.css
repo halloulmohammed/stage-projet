@@ -72,14 +72,3 @@
 #logo{
   display: block;
 }
-/* @media screen width=468.8px { */
-  
-@media (max-width: 480px) {
-  #nav-bar{
-    display: none;
-  }
-  .navbar{
-      width: 100%;
-      box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-  }
-}

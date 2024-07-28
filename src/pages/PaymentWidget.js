@@ -30,7 +30,7 @@ export const PaymentWidget = ({ onClose }) => {
       <div className="payment-content">
         <span className="close" onClick={onClose}>&times;</span>
         <h2>Provide Your Information</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='payment-form'>
           <label htmlFor="name">Name:</label>
           <input
             type="text"

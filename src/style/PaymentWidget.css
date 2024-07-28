@@ -35,12 +35,12 @@
     color: #000;
   }
   
-  h2 {
+  .payment-widget h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
   
-  form {
+  .payment-form {
     display: flex;
     flex-direction: column;
   }

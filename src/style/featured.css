@@ -26,9 +26,6 @@ html {
   align-items: center;
 }
 
-body {
-  background-color: #f7f7f7;
-}
 
 .page-wrapper {
   height: 100%;
@@ -282,4 +279,7 @@ body {
   letter-spacing: 0.045em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+@media screen and (max-width: 1023px) {
+
 }
